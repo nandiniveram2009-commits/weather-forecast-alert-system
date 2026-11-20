@@ -14,11 +14,45 @@ An end-to-end Python application that fetches real-time (or simulated) weather, 
 - **Data & Visualization:** Pandas, Matplotlib, Streamlit
 - **API & Networking:** FastAPI, Uvicorn, Requests, python-dotenv
 
-## 🚀 Quick Start
+
+## Architecture
+```
+User City / Thresholds
+        │
+        ▼
+[ Weather API Client ] ──► Open-Meteo / OpenWeatherMap (or Virtual Simulator)
+        │
+        ▼
+[ Alert Rule Engine ]  ──► Heat / Cold / Rain / Wind / Humidity / AQI Checks
+        │
+        ├──► FastAPI REST Service (/weather/{city}, /simulate)
+        ├──► Streamlit / Web Dashboard (Charts + Station Map)
+        └──► Pandas CSV Audit Report + Matplotlib PNG Charts
+```
+
+## Quick Start
 ```bash
-git clone https://github.com/<your-username>/Weather-Forecast-Alert-Application.git
-cd Weather-Forecast-Alert-Application
 python -m venv venv
-# Windows: venv\Scripts\activate | Mac/Linux: source venv/bin/activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 cp .env.example .env
+
+# Run CLI with live API
+python main.py --city "Mumbai"
+
+# Run Virtual Simulation safely offline
+python main.py --city "New Delhi" --simulate --scenario heatwave
+
+# Launch FastAPI server
+uvicorn app_fastapi:app --reload --port 8000
+
+# Launch Streamlit dashboard
+streamlit run app_streamlit.py
+
+
+## Authors
+
+* **GitHub:** [nandiniverma2009](https://github.com)
+* **LinkedIn:** [NandiniVerma](https://linkedin.com)
+
+```
