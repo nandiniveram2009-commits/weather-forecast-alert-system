@@ -1,0 +1,47 @@
+{
+  "heatwave": {
+    "current": {
+      "observed_at": "2026-05-18T14:00",
+      "temperature_c": 44.2,
+      "humidity_pct": 24,
+      "precipitation_mm": 0.0,
+      "wind_kmh": 19.5,
+      "us_aqi": 168
+    },
+    "hourly": {
+      "time": ["08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"],
+      "temperature_c": [34.0, 38.5, 42.1, 44.2, 43.8, 40.2, 36.4, 33.1],
+      "precipitation_mm": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    }
+  },
+  "monsoon": {
+    "current": {
+      "observed_at": "2026-07-22T16:00",
+      "temperature_c": 27.8,
+      "humidity_pct": 94,
+      "precipitation_mm": 24.5,
+      "wind_kmh": 48.0,
+      "us_aqi": 38
+    },
+    "hourly": {
+      "time": ["08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"],
+      "temperature_c": [29.1, 28.8, 28.4, 27.9, 27.8, 27.2, 26.8, 26.5],
+      "precipitation_mm": [4.2, 9.8, 15.4, 21.0, 24.5, 18.2, 10.5, 6.0]
+    }
+  },
+  "smog": {
+    "current": {
+      "observed_at": "2026-11-12T08:00",
+      "temperature_c": 8.6,
+      "humidity_pct": 88,
+      "precipitation_mm": 0.0,
+      "wind_kmh": 5.4,
+      "us_aqi": 265
+    },
+    "hourly": {
+      "time": ["06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00"],
+      "temperature_c": [7.2, 8.6, 11.4, 15.2, 16.8, 15.1, 12.0, 9.8],
+      "precipitation_mm": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    }
+  }
+}
